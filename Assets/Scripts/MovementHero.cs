@@ -16,7 +16,8 @@ public class MovementHero : MonoBehaviour {
 	
 	}
 
-	void Movement(Vector3 direction) {
+	public void move(Vector3 direction) {
+		Debug.Log (direction);
 		rigidbody.AddForce (force * direction);
 	}
 
