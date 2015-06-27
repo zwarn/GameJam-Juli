@@ -23,11 +23,11 @@ public class Controller : MonoBehaviour
 
 	void Update ()
 	{
-		GetAxis ("Hor1");
-		GetAxis ("Ver1");	
-		GetAxis ("Hor2");
-		GetAxis ("Ver2");	
-		GetAxis ("Hor3");
-		GetAxis ("Ver3");	
+		GetAxis ("hor1");
+		GetAxis ("ver1");	
+		GetAxis ("hor2");
+		GetAxis ("ver2");	
+		GetAxis ("hor3");
+		GetAxis ("ver3");	
 	}
 }
