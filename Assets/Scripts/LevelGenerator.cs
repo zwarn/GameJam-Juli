@@ -306,9 +306,13 @@ public class LevelGenerator : MonoBehaviour
 			Step ();
 		}	
 		GateProb = p;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 30; i++) {
 			Step ();
 		}	
+		GateProb = 1;
+		while (openEnds.Count > 0) {
+			Step ();
+		}
 	}
 	
 	public bool Generate = false;
