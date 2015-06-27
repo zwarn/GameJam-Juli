@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3335548}
   - 23: {fileID: 2363516}
   - 95: {fileID: 9566232}
-  - 64: {fileID: 6469002}
+  - 64: {fileID: 6452900}
   m_Layer: 0
   m_Name: Tube
   m_TagString: Untagged
@@ -63,7 +63,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103896}
   m_Mesh: {fileID: 4300000, guid: af5e3a8351684c745b666ec6556078bd, type: 3}
---- !u!64 &6469002
+--- !u!64 &6452900
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

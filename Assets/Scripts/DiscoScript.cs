@@ -9,7 +9,7 @@ public class DiscoScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Renderer = GetComponent<MeshRenderer> ();
+		renderer = GetComponent<MeshRenderer> ();
 	}
 	
 	// Update is called once per frame
