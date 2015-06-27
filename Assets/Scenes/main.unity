@@ -130,6 +130,10 @@ Prefab:
       propertyPath: movementHero
       value: 
       objectReference: {fileID: 806931360}
+    - target: {fileID: 11465578, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1127303081}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
   m_IsPrefabParent: 0
@@ -249,6 +253,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 316d15c74dc44524bad92cef76005bdf, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &739506147 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2020592, guid: 0dcfa9cf7fa482148ab7f7817fad9944,
+    type: 2}
+  m_PrefabInternal: {fileID: 324655849}
 --- !u!1 &806931359 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 192478, guid: 0dcfa9cf7fa482148ab7f7817fad9944, type: 2}
@@ -271,3 +280,31 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1127303078 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 114296, guid: 0dcfa9cf7fa482148ab7f7817fad9944, type: 2}
+  m_PrefabInternal: {fileID: 324655849}
+--- !u!114 &1127303081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127303078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be540dd1aad31fe4991a335e9fed2649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraX: {fileID: 1253086766}
+  cameraY: {fileID: 1582140151}
+  cameraZ: {fileID: 739506147}
+--- !u!20 &1253086766 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2041904, guid: 0dcfa9cf7fa482148ab7f7817fad9944,
+    type: 2}
+  m_PrefabInternal: {fileID: 324655849}
+--- !u!20 &1582140151 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2069066, guid: 0dcfa9cf7fa482148ab7f7817fad9944,
+    type: 2}
+  m_PrefabInternal: {fileID: 324655849}
