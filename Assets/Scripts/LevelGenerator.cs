@@ -287,16 +287,21 @@ public class LevelGenerator : MonoBehaviour
 		AddElement (nextElt);
 	}
 
-	void Gen ()
+	void Clear ()
 	{
 		GameObject level = GameObject.Find ("Level");
 		foreach (Transform child in level.transform) {			
 			GameObject.DestroyImmediate (child.gameObject);
 		}
-	
+		
 		this.elements.Clear ();
 		this.openEnds.Clear ();
 		this.occupied.Clear ();
+	}
+
+	void Gen ()
+	{
+		Clear ();
 		LevelElement start = new LevelElement ();
 		start.dir = Direction.FRONT;		
 		openEnds.Add (start);			
@@ -316,6 +321,7 @@ public class LevelGenerator : MonoBehaviour
 	}
 	
 	public bool Generate = false;
+	public bool ClearAll = false;
 
 	
 	// Update is called once per frame
@@ -324,6 +330,10 @@ public class LevelGenerator : MonoBehaviour
 		if (Generate) {
 			Generate = false;
 			Gen ();
+		}
+		if (ClearAll) {
+			ClearAll = false;
+			Clear ();
 		}
 	}
 }
