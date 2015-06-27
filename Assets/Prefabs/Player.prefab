@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 432968}
   - 108: {fileID: 10816864}
   - 114: {fileID: 11458184}
+  - 81: {fileID: 8167316}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -264,6 +265,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!81 &8167316
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114296}
+  m_Enabled: 1
 --- !u!108 &10816864
 Light:
   m_ObjectHideFlags: 1
