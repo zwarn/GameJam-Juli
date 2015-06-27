@@ -51,6 +51,7 @@ public struct LevelElement
 	public Point pos;
 }
 
+[ExecuteInEditMode]
 public class LevelGenerator : MonoBehaviour
 {
 	public float RoomProb = 0.2f;
@@ -65,13 +66,6 @@ public class LevelGenerator : MonoBehaviour
 	private List<LevelElement> elements = new List<LevelElement> ();
 	private List<LevelElement> openEnds = new List<LevelElement> ();
 	private HashSet<Point> occupied = new HashSet<Point> ();
-	
-	public LevelGenerator ()
-	{
-		LevelElement start = new LevelElement ();
-		start.dir = Direction.FRONT;		
-		openEnds.Add (start);					
-	}
 	
 	private Tile RandomTile ()
 	{	
@@ -219,7 +213,8 @@ public class LevelGenerator : MonoBehaviour
 		GameObject obj = GetPrefab (elt.tile);
 		Vector3 pos = Center (elt);
 		Quaternion rot = Rotation (elt.dir);
-		Instantiate (obj, pos, rot);
+		GameObject o = (GameObject)(Instantiate (obj, pos, rot));
+		o.transform.parent = GameObject.Find ("Level").transform;
 	}
 	
 	public void AddElement (LevelElement elt)
@@ -258,7 +253,9 @@ public class LevelGenerator : MonoBehaviour
 			LevelElement open = new LevelElement ();
 			open.pos = GoInDir (center, dir, steps);
 			open.dir = dir;
-			ret.Add (open);
+			if (!ignoreStart.Equals (open.pos)) {
+				ret.Add (open);
+			}
 		}
 		return ret;
 	}
@@ -290,17 +287,39 @@ public class LevelGenerator : MonoBehaviour
 		AddElement (nextElt);
 	}
 
-	// Use this for initialization
-	void Start ()
+	void Gen ()
 	{
+		GameObject level = GameObject.Find ("Level");
+		foreach (Transform child in level.transform) {
+			GameObject.Destroy (child.gameObject);
+		}
+	
+		this.elements.Clear ();
+		this.openEnds.Clear ();
+		this.occupied.Clear ();
+		LevelElement start = new LevelElement ();
+		start.dir = Direction.FRONT;		
+		openEnds.Add (start);			
+		var p = GateProb;
+		GateProb = 0f;
+		for (int i = 0; i < 4; i++) {
+			Step ();
+		}	
+		GateProb = p;
 		for (int i = 0; i < 10; i++) {
 			Step ();
-		}		
+		}	
 	}
+	
+	public bool Generate = false;
+
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		if (Generate) {
+			Generate = false;
+			Gen ();
+		}
 	}
 }
