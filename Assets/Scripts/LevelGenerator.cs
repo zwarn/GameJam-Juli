@@ -229,6 +229,7 @@ public class LevelGenerator : MonoBehaviour
 		foreach (var p in OccupiedBy(elt)) {
 			occupied.Add (p);
 		}
+		AddReally (elt);
 	}
 	
 	public Point TubeExit (LevelElement elt)
