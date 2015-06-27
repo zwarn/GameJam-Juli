@@ -134,6 +134,18 @@ Prefab:
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 1127303081}
+    - target: {fileID: 11465578, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
+      propertyPath: arrowY
+      value: 
+      objectReference: {fileID: 498116460}
+    - target: {fileID: 11465578, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
+      propertyPath: arrowX
+      value: 
+      objectReference: {fileID: 604915023}
+    - target: {fileID: 11465578, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
+      propertyPath: arrowZ
+      value: 
+      objectReference: {fileID: 829863650}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ce41f27fdad7c94e89f6fde9ebc7222, type: 2}
   m_IsPrefabParent: 0
@@ -269,6 +281,14 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 316d15c74dc44524bad92cef76005bdf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &498116460 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 193648, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+  m_PrefabInternal: {fileID: 1085676124}
+--- !u!1 &604915023 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 126326, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+  m_PrefabInternal: {fileID: 1085676124}
 --- !u!20 &739506147 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2020592, guid: 0dcfa9cf7fa482148ab7f7817fad9944,
@@ -296,6 +316,10 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &829863650 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129588, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+  m_PrefabInternal: {fileID: 1085676124}
 --- !u!1001 &1085676124
 Prefab:
   m_ObjectHideFlags: 0
@@ -373,6 +397,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22466146, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479328, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489826, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435986, guid: efe99964a6359ce47bacf0178766bd41, type: 2}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

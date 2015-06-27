@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class InputController : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class InputController : MonoBehaviour
 	private bool isFlippedX = false;
 	private bool isFlippedY = false;
 	private bool isFlippedZ = false;
+
+	public GameObject arrowX;
+	public GameObject arrowY;
+	public GameObject arrowZ;
 
 	// Use this for initialization
 	void Start ()
@@ -34,14 +39,20 @@ public class InputController : MonoBehaviour
 		if (Input.GetButtonDown ("X-Flip")) {
 			isFlippedX = ! isFlippedX;
 			cameraController.flipX ();
+			Color color = isFlippedX ? Color.white : new Color(0,0,0,0);
+			arrowX.GetComponent<Image>().color = color;
 		}
 		if (Input.GetButtonDown ("Y-Flip")) {
 			isFlippedY = ! isFlippedY;
 			cameraController.flipY ();
+			Color color = isFlippedY ? Color.white : new Color(0,0,0,0);
+			arrowY.GetComponent<Image>().color = color;
 		}
 		if (Input.GetButtonDown ("Z-Flip")) {
 			isFlippedZ = ! isFlippedZ;
 			cameraController.flipZ ();
+			Color color = isFlippedZ ? Color.white : new Color(0,0,0,0);
+			arrowZ.GetComponent<Image>().color = color;
 		}
 	}
 }

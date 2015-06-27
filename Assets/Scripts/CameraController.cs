@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour {
 
 	public void flipX() {
 		cameraX.transform.Rotate (new Vector3 (180, 0, 0));
+
 	}
 
 	public void flipY() {
