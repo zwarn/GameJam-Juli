@@ -290,8 +290,8 @@ public class LevelGenerator : MonoBehaviour
 	void Gen ()
 	{
 		GameObject level = GameObject.Find ("Level");
-		foreach (Transform child in level.transform) {
-			GameObject.Destroy (child.gameObject);
+		foreach (Transform child in level.transform) {			
+			GameObject.DestroyImmediate (child.gameObject);
 		}
 	
 		this.elements.Clear ();
