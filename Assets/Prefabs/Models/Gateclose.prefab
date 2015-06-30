@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3360084}
   - 23: {fileID: 2388604}
   - 95: {fileID: 9543246}
-  - 114: {fileID: 11475246}
   - 64: {fileID: 6407114}
   m_Layer: 0
   m_Name: Gateclose
@@ -92,17 +91,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11475246
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef691a20d2ebd4780e5b626a6173fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

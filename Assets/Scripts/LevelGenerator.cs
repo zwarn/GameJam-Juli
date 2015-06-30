@@ -205,7 +205,7 @@ public class LevelGenerator : MonoBehaviour
 			to = new Vector3 (0, 0, 1);
 			break;
 		}			
-		return Quaternion.FromToRotation (from, to);
+		return Quaternion.FromToRotation (from, to) * Quaternion.Euler(90,0,0);
 	}
 	
 	public void AddReally (LevelElement elt)
