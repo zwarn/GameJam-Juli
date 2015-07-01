@@ -6,14 +6,6 @@ public class InputController : MonoBehaviour
 {
 
 	public MovementHero movementHero;
-	public CameraController cameraController;
-	private bool isFlippedX = false;
-	private bool isFlippedY = false;
-	private bool isFlippedZ = false;
-
-	public GameObject arrowX;
-	public GameObject arrowY;
-	public GameObject arrowZ;
 
 	// Use this for initialization
 	void Start ()
@@ -21,38 +13,17 @@ public class InputController : MonoBehaviour
 	
 	}
 	
-	float GetAxis (string axis, bool flip)
-	{
-		var keyAxis = axis + "k";
-		var res = Input.GetAxis (axis) + Input.GetAxis (keyAxis);
-		return flip ? -res : res;
-	}
-	
 	// Update is called once per frame
 	void Update ()
 	{
-		float x = GetAxis ("ver3", isFlippedZ) + GetAxis ("hor2", false);
-		float y = GetAxis ("hor1", false) + GetAxis ("hor3", false);
-		float z = - GetAxis ("ver1", isFlippedX) - GetAxis ("ver2", isFlippedY);
-		movementHero.move (new Vector3 (x, y, z).normalized);
+		float rotX = Input.GetAxis ("ver1");
+		float rotY = Input.GetAxis ("hor1");
 
-		if (Input.GetButtonDown ("X-Flip")) {
-			isFlippedX = ! isFlippedX;
-			cameraController.flipX ();
-			Color color = isFlippedX ? Color.white : new Color(0,0,0,0);
-			arrowX.GetComponent<Image>().color = color;
-		}
-		if (Input.GetButtonDown ("Y-Flip")) {
-			isFlippedY = ! isFlippedY;
-			cameraController.flipY ();
-			Color color = isFlippedY ? Color.white : new Color(0,0,0,0);
-			arrowY.GetComponent<Image>().color = color;
-		}
-		if (Input.GetButtonDown ("Z-Flip")) {
-			isFlippedZ = ! isFlippedZ;
-			cameraController.flipZ ();
-			Color color = isFlippedZ ? Color.white : new Color(0,0,0,0);
-			arrowZ.GetComponent<Image>().color = color;
-		}
+		movementHero.rotate(new Vector3(rotX, 0, rotY));
+
+		float speed = Input.GetAxis ("thrust1");
+		Debug.Log (speed);
+
+		movementHero.move (speed);
 	}
 }

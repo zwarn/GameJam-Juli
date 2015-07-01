@@ -4,6 +4,8 @@ using System.Collections;
 public class MovementHero : MonoBehaviour {
 
 	public float force;
+	public float rotationSpeed = 100;
+
 	public LayerMask collisionLayer;
 	private Rigidbody rigidbody;
 
@@ -17,8 +19,12 @@ public class MovementHero : MonoBehaviour {
 	
 	}
 
-	public void move(Vector3 direction) {
-		rigidbody.AddForce (force * direction);
+	public void rotate(Vector3 direction) {
+		transform.Rotate (direction * Time.deltaTime * rotationSpeed);
+	}
+
+	public void move(float thrust) {
+		rigidbody.AddForce (thrust * force * Time.deltaTime * transform.up);
 	}
 
 	void OnCollisionEnter(Collision coll) {

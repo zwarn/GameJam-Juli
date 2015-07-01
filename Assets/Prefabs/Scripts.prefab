@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 419552}
   - 114: {fileID: 11465578}
   - 114: {fileID: 11461116}
+  - 114: {fileID: 11401774}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -29,6 +30,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11401774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005395574bddd4471998b30a38b1ea75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomProb: .200000003
+  GateProb: 1
+  Tube: {fileID: 107264, guid: 055a161de17873a4aa87c8fc951ba4c1, type: 2}
+  Cube: {fileID: 134376, guid: 5c61e2adf1e61f1498f2b8c8089c8df9, type: 2}
+  Room: {fileID: 159754, guid: 00ae79c9177ca7a46889239fb06e03db, type: 2}
+  ClosedGate: {fileID: 184578, guid: de13a9b99b4fff441a217b120249e99a, type: 2}
+  OpenGate: {fileID: 116122, guid: 1c6e9a443492d424c9b4eca06a6eb39b, type: 2}
+  Generate: 0
+  ClearAll: 0
 --- !u!114 &11461116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +73,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementHero: {fileID: 0}
-  cameraController: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

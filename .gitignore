@@ -20,4 +20,8 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+#builds
+test_Data/
+test.exe
+
 .DS_Store
